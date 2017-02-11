@@ -37,10 +37,13 @@ public class HTMLParser {
             text = elementSelector.text();
             if (parseFrom != null && parseTo != null) {
                 String param = parseFrom;
-                int start = tag.indexOf(param) + param.length();
+                int start = tag.indexOf(param);
                 int end = tag.indexOf(parseTo, start);
-                if (start > -1 && end > -1)
+                if (start > -1 && end > -1){
+                    start = tag.indexOf(param) + param.length();
+                    end = tag.indexOf(parseTo, start);
                     text = tag.substring(start, end);
+                }
             }
         } catch (IOException ex) {
             System.out.println(ex);
