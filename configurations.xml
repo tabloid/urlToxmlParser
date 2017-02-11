@@ -1,0 +1,16 @@
+<configurations>
+
+	<configuration>
+		<url>http://bellson-shop.com.ua/all_products/BL-E27_11W_940_A60.html</url>
+		<selector>#content > h1</selector>
+		<selector parseFrom="nbsp;" parseTo="&lt;" >#wrap-prod > div.wrap-item > div:nth-child(1) > div.wrap-item-price > p.price-new</selector>
+	</configuration>
+	<configuration>
+		<url>http://hotline.ua/dom-elektrolampy/electrum-led-d45-6w-e27-3000-pa-lb-32-a-lb-1407/</url>
+		<selector>head > title</selector>
+		yottos_price
+		<selector parseFrom="yottos_price =" parseTo=";" >script:containsData(yottos_price)</selector>
+	</configuration>
+	
+
+</configurations>
